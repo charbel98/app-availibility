@@ -1,0 +1,17 @@
+{
+  "name": "SABIS.Plugins.AppAvailibility",
+  "version": "0.0.1",
+  "description": "",
+  "cordova": {
+    "id": "SABIS.Plugins.AppAvailibility",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "SABIS",
+  "license": "ISC"
+}
