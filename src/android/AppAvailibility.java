@@ -19,7 +19,7 @@ public class AppAvailibility extends CordovaPlugin {
     ) throws JSONException {
         if(action.equals("isAppRunning")){
             try {
-                isAppRunning(this.cordova.getActivity().getApplicationContext(), args.getJSONObject(0).getString("appName"));
+                isAppRunning(this.cordova.getActivity().getApplicationContext(), args.getString(0));
             }
             catch (Exception e){
                 callbackContext.error("Something went wrong " + e.getMessage());
