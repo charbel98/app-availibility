@@ -18,17 +18,11 @@ public class AppAvailibility extends CordovaPlugin {
             CallbackContext callbackContext
     ) throws JSONException {
         if(action.equals("isAppRunning")){
-            try {
-                isAppRunning(this.cordova.getActivity().getApplicationContext(), args.getString(0));
-            }
-            catch (Exception e){
-                callbackContext.error("Something went wrong " + e.getMessage());
-            }
+          isAppRunning(this.cordova.getActivity().getApplicationContext(), args.getString(0));
         }
         return false;
     }
-    public boolean isAppRunning(final Context ctx,final String myPackage) throws  Exception{
-        if(myPackage == null){ throw new Exception();}
+    public boolean isAppRunning(final Context ctx,final String myPackage){
         final  ActivityManager activityManager = (ActivityManager) ctx.getSystemService(Context.ACTIVITY_SERVICE);
         final  List<ActivityManager.RunningAppProcessInfo> processesInfos = activityManager.getRunningAppProcesses();
         if (processesInfos != null)
