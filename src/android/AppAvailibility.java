@@ -19,7 +19,7 @@ public class AppAvailibility extends CordovaPlugin {
             CallbackContext callbackContext
     ) throws JSONException {
         if(action.equals("isAppRunning")){
-          isAppRunning(this.cordova.getActivity().getApplicationContext(), args.getString(0));
+          isAppRunning(this.cordova.getActivity().getApplicationContext(), args.getString(0), callbackContext);
             return true;
         }
          if(action.equals("nativeToast")){ 
@@ -28,7 +28,7 @@ public class AppAvailibility extends CordovaPlugin {
          }
         return false;
     }
-    public void isAppRunning(final Context ctx,final String myPackage){
+    public void isAppRunning(final Context ctx,final String myPackage, final CallbackContext callback){
            Toast.makeText(
                       webView.getContext(), 
                       myPackage,
