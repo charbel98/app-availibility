@@ -28,11 +28,21 @@ public class AppAvailibility extends CordovaPlugin {
          }
         return false;
     }
-    public void isAppRunning(final Context ctx,final String myPackage, final CallbackContext callback){
-          
+    public void isAppRunning(final Context ctx,final String myPackage, final CallbackContext callback)throws PackageManager.NameNotFoundException {
+
         final  ActivityManager activityManager = (ActivityManager) ctx.getSystemService(ctx.ACTIVITY_SERVICE);
         final  List<ActivityManager.RunningAppProcessInfo> processesInfos = activityManager.getRunningAppProcesses();
-        
+        final android.content.pm.PackageManager packageManager = ctx.getPackageManager();
+        List<android.app.ActivityManager.RunningTaskInfo> runningTasks = activityManager.getRunningTasks(Integer.MAX_VALUE);
+        Toast.makeText(
+                webView.getContext(),
+                String.valueOf(runningTasks.size()),
+                Toast.LENGTH_SHORT)
+                .show();
+        for (android.app.ActivityManager.RunningTaskInfo runningTaskInfo : runningTasks) {
+            String packageName = runningTaskInfo.baseActivity.getPackageName();
+            String appName = packageManager.getApplicationInfo(packageName, 0).loadLabel(packageManager).toString();
+        }
         if (processesInfos != null)
         {
              Toast.makeText(
