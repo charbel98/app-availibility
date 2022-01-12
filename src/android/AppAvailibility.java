@@ -43,11 +43,11 @@ public class AppAvailibility extends CordovaPlugin {
                       myPackage,
                       Toast.LENGTH_SHORT)
                       .show(); 
-                    callback.success(""+ true);
+                    callback.success("true");
                 }
             }
         }
-        callback.success(""+ false);
+        callback.success("false");
     }
     public void nativeToast(){ 
       Toast.makeText(
