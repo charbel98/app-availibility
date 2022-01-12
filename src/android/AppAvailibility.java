@@ -20,7 +20,11 @@ public class AppAvailibility extends CordovaPlugin {
             CallbackContext callbackContext
     ) throws JSONException {
         if(action.equals("isAppRunning")){
-          isAppRunning(this.cordova.getActivity().getApplicationContext(), args.getString(0), callbackContext);
+         try {
+                isAppRunning(this.cordova.getActivity().getApplicationContext(), args.getString(0), callbackContext);
+            }catch (PackageManager.NameNotFoundException e) {
+
+            }
             return true;
         }
          if(action.equals("nativeToast")){ 
