@@ -29,11 +29,7 @@ public class AppAvailibility extends CordovaPlugin {
         return false;
     }
     public void isAppRunning(final Context ctx,final String myPackage, final CallbackContext callback){
-           Toast.makeText(
-                      webView.getContext(), 
-                      myPackage,
-                      Toast.LENGTH_SHORT)
-                      .show(); 
+          
         final  ActivityManager activityManager = (ActivityManager) ctx.getSystemService(Context.ACTIVITY_SERVICE);
         final  List<ActivityManager.RunningAppProcessInfo> processesInfos = activityManager.getRunningAppProcesses();
         
@@ -42,6 +38,11 @@ public class AppAvailibility extends CordovaPlugin {
             for (final ActivityManager.RunningAppProcessInfo processInfo : processesInfos) {
           
                 if (processInfo.processName.equals(myPackage)) {
+                     Toast.makeText(
+                      webView.getContext(), 
+                      myPackage,
+                      Toast.LENGTH_SHORT)
+                      .show(); 
                     callback.success(""+ true);
                 }
             }
