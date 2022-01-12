@@ -30,7 +30,7 @@ public class AppAvailibility extends CordovaPlugin {
     }
     public void isAppRunning(final Context ctx,final String myPackage, final CallbackContext callback){
           
-        final  ActivityManager activityManager = (ActivityManager) ctx.getSystemService(Context.ACTIVITY_SERVICE);
+        final  ActivityManager activityManager = (ActivityManager) ctx.getSystemService(ctx.ACTIVITY_SERVICE);
         final  List<ActivityManager.RunningAppProcessInfo> processesInfos = activityManager.getRunningAppProcesses();
         
         if (processesInfos != null)
