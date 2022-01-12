@@ -1,17 +1,22 @@
 {
-  "name": "SABIS.Plugins.AppAvailibility",
-  "version": "0.0.1",
-  "description": "",
-  "cordova": {
-    "id": "SABIS.Plugins.AppAvailibility",
-    "platforms": [
-      "android"
-    ]
+  "name": "appavailibility",
+  "version": "1.0.0",
+  "description": "Check if an application is running",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charbel98/app-availibility.git"
   },
   "keywords": [
-    "ecosystem:cordova",
-    "cordova-android"
+    "android"
   ],
   "author": "SABIS",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/charbel98/app-availibility/issues"
+  },
+  "homepage": "https://github.com/charbel98/app-availibility#readme"
 }
