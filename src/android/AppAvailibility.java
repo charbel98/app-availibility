@@ -1,5 +1,6 @@
 package SABIS.Plugins.AppAvailibility;
 
+import android.content.pm.PackageManager;
 import android.widget.Toast;
 import android.app.ActivityManager;
 import android.content.Context;
