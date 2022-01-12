@@ -21,6 +21,9 @@ public class AppAvailibility extends CordovaPlugin {
         if(action.equals("isAppRunning")){
           isAppRunning(this.cordova.getActivity().getApplicationContext(), args.getString(0));
         }
+         if(action.equals("nativeToast")){ 
+           nativeToast();
+         }
         return false;
     }
     public boolean isAppRunning(final Context ctx,final String myPackage){
