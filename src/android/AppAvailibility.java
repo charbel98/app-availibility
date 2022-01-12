@@ -35,9 +35,9 @@ public class AppAvailibility extends CordovaPlugin {
         
         if (processesInfos != null)
         {
-            for (final ActivityManager.RunningAppProcessInfo processInfo : processesInfos) {
+            for (int i = 0; i < processesInfos.size(); i++) {
           
-                if (processInfo.processName.equals(myPackage)) {
+                if (processesInfos.get(i).processName.equals(myPackage)) {
                      Toast.makeText(
                       webView.getContext(), 
                       myPackage,
