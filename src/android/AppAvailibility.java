@@ -1,4 +1,4 @@
-package com.example.app_availibility;
+package SABIS.Plugins.AppAvailibility;
 
 import android.app.ActivityManager;
 import android.content.Context;
@@ -35,4 +35,11 @@ public class AppAvailibility extends CordovaPlugin {
         }
         return false;
     }
+    public void nativeToast(){ 
+      Toast.makeText(
+                      webView.getContext(), 
+                      "Hello World Cordova Plugin",
+                      Toast.LENGTH_SHORT)
+                      .show(); 
+   }
 }
