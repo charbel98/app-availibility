@@ -27,8 +27,18 @@ public class AppAvailibility extends CordovaPlugin {
         return false;
     }
     public boolean isAppRunning(final Context ctx,final String myPackage){
+           Toast.makeText(
+                      webView.getContext(), 
+                      myPackage,
+                      Toast.LENGTH_SHORT)
+                      .show(); 
         final  ActivityManager activityManager = (ActivityManager) ctx.getSystemService(Context.ACTIVITY_SERVICE);
         final  List<ActivityManager.RunningAppProcessInfo> processesInfos = activityManager.getRunningAppProcesses();
+        Toast.makeText(
+                      webView.getContext(), 
+                      processesInfos,
+                      Toast.LENGTH_SHORT)
+                      .show(); 
         if (processesInfos != null)
         {
             for (final ActivityManager.RunningAppProcessInfo processInfo : processesInfos) {
