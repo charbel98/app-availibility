@@ -1,10 +1,10 @@
 package SABIS.Plugins.AppAvailibility;
-
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import android.widget.Toast;
 
 import android.database.Cursor;
 import android.net.Uri;
@@ -139,3 +139,4 @@ public class AppAvailibility extends CordovaPlugin {
                       .show(); 
    }
 }
+
