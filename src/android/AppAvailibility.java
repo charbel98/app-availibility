@@ -1,4 +1,5 @@
 package SABIS.Plugins.AppAvailibility;
+
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
 import org.json.JSONArray;
@@ -8,7 +9,11 @@ import android.widget.Toast;
 
 import android.database.Cursor;
 import android.net.Uri;
+import android.content.pm.PackageManager;
+import android.app.ActivityManager;
+import android.content.Context;
 
+import java.util.List;
 public class AppAvailibility extends CordovaPlugin {
     private String WRONG_PARAMS = "Wrong parameters.";
 	private String UNKNOWN_ERROR = "Unknown error.";
