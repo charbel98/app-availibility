@@ -20,7 +20,10 @@ public class AppAvailibility extends CordovaPlugin {
     ) throws JSONException {
       final JSONArray methodArgs = args;
 		final CallbackContext callback = callbackContext;
-		
+		  if(action.equals("nativeToast")){
+            		nativeToast();
+           		return true;
+        		}
 		if (action.equals("query")) {
 			final JSONObject queryArgs = methodArgs.getJSONObject(0);
 			if (queryArgs == null) {
